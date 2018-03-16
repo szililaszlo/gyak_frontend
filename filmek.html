@@ -1,0 +1,15 @@
+<h1>Filmek szerkesztése</h1>
+<section ng-controller="filmekController" ng-init="init()">
+<div ng-repeat="film in films">
+<form ng-submit="editFilm(film)">
+Film cím: <input type="text" ng-model="film.cim" ng-value="film.cim" name="film.id"><br>
+Film hossza(perc): <input type="number" ng-model="film.hossz" ng-value="film.hossz" name="film.id">
+<input type="hidden" ng-model="film.id">
+    <input type="submit" value="Mentés!">
+</form>
+</div>
+<div onmouseover="emptyInput()">
+    <button ng-click="saveAllFilm(films)" id="saveAllBtn" >Save all film!</button><br><br>
+    <button ng-click="getAllFilm()">Get all film!</button>
+</div>
+</section>

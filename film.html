@@ -1,0 +1,10 @@
+<h1>Filmek szerkesztése</h1>
+<section ng-controller="filmController" >
+<div>
+<form ng-submit="addFilm()">
+Film cím: <input type="text" ng-model="film.cim"><br>
+Film hossza(perc): <input type="number" ng-model="film.hossz">
+    <input type="submit" value="Mentés!">
+</form>
+</div>
+</section>
